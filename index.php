@@ -10,11 +10,7 @@ include 'productos.php';
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<<<<<<< HEAD
-    <h1> HOLA </h1>
-    <h2> chau </h2>
-    
-=======
+
     <?php include("header.html"); ?>
     <h1>Catálogo</h1>
     <div class="contenedor">
@@ -27,6 +23,6 @@ include 'productos.php';
             </div>
         <?php endforeach; ?>
     </div>
->>>>>>> cfbfe5169349a2f78aef4657046f185131594bdc
+    
 </body>
 </html>
