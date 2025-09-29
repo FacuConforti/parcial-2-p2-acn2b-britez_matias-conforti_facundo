@@ -1,19 +1,23 @@
-body{
+/* GENERALES */
+
+body {
+    min-height: 100vh;
     font-family:Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
 }
 
 h1 {text-align: center;
 }
 
-form {margin-bottom: 20px; text-align: center;
+
+/* CATALOGO */
+.catalogo{
+    margin: 0;
+    padding: 20px;    
+    display: flex;
+    flex-wrap: wrap;
 }
 
-input, select {padding: 5px; margin: 0 5px;
-}
+/* CATALOGO TARJETA */
 
 .tarjeta {
     border-radius: 8px;
@@ -33,12 +37,21 @@ input, select {padding: 5px; margin: 0 5px;
 }
 
 .tarjeta h3 {margin: 10px 0 5px;}
+
 .tarjeta p {font-size: 14px}
+
 .tarjeta:hover {transform: translateY(-5px); box-shadow: 0 8px 12px rgba(0,0,0,0.2);}
+
 .categoria {
     display: inline-block;
     margin-top: 5px;
     font-size: 12px;
     padding: 2px 6px;
     border-radius: 4px;
+}
+
+form {margin-bottom: 20px; text-align: center;
+}
+
+input, select {padding: 5px; margin: 0 5px;
 }

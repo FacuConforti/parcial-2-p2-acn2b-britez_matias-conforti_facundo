@@ -1,6 +1,7 @@
 <?php
 include 'productos.php'; 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,8 +13,9 @@ include 'productos.php';
 <body>
 
     <?php include("header.html"); ?>
-    <h1>Catálogo</h1>
-    <div class="contenedor">
+    
+    <div class="catalogo">
+        <h1>Catálogo</h1>
         <?php foreach ($items as $item): ?>
             <div class="tarjeta">
                 <img src="<?php echo $item["imagen"]; ?>" alt="<?php echo $item["titulo"]; ?>">
@@ -23,6 +25,8 @@ include 'productos.php';
             </div>
         <?php endforeach; ?>
     </div>
+
+    <?php include("footer.html"); ?>
     
 </body>
 </html>
