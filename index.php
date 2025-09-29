@@ -14,8 +14,9 @@ include 'productos.php';
 
     <?php include("header.html"); ?>
     
+    <h1>Catálogo</h1>
     <div class="catalogo">
-        <h1>Catálogo</h1>
+        
         <?php foreach ($items as $item): ?>
             <div class="tarjeta">
                 <img src="<?php echo $item["imagen"]; ?>" alt="<?php echo $item["titulo"]; ?>">
