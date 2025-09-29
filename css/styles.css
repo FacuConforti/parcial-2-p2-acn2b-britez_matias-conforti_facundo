@@ -3,29 +3,44 @@
 body {
     margin: 0px;
     padding: 0px;
-    min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    flex-direction: column;
 }
 
-h1 {text-align: center;
+h1 {
+    text-align: center;
 }
 
 a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 15px;
 }
 
 /* HEADER */
 
 .header{
-    background-color: #333;
+    background-color: #2c2c2c;
     color: white;
     padding: 10px 0;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 250px;
+    vertical-align: middle;
+    margin: 15px;
+}
+/* MAIN */
+
+.main{
+    display: flex;
+    flex-direction: column;
+    min-height: 75vh;
 }
 
 /* CATALOGO */
@@ -36,15 +51,28 @@ a {
     flex-wrap: wrap;
 }
 
-/* CATALOGO TARJETA */
+/* HEADER */
+
+.footer{
+    background-color: #2c2c2c;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* TARJETAS */
 
 .tarjeta {
     border-radius: 8px;
     padding: 15px;
     margin: 10px;
     width: 220px;
+    height: 350px;
     text-align: center;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     vertical-align: top;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: transform 0.3s, box-shadow 0.3s;
@@ -55,11 +83,68 @@ a {
     border-radius: 4px;
 }
 
-.tarjeta h3 {margin: 10px 0 5px;}
+.tarjeta h3 {
+    margin: 10px 0 5px;
+}
 
-.tarjeta p {font-size: 14px}
+.tarjeta p {
+    font-size: 14px
+}
 
-.tarjeta:hover {transform: translateY(-5px); box-shadow: 0 8px 12px rgba(0,0,0,0.2);}
+/* MODO OSCURO */
+
+/* Tema claro (por defecto) */
+body.claro {
+    background-color: white;
+    color: black;
+}
+
+body.oscuro {
+    background-color: #111;
+    color: #eee;
+}
+
+/* Botón Modo Oscuro */
+.boton-tema {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background: #eee;
+    color: #111;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+body.oscuro .boton-tema {
+    background: #333;
+    color: #eee;
+    border-color: #555;
+}
+
+/* Tarjetas Modo Oscuro */
+
+body.claro .tarjeta {
+    background-color: #fff;
+    color: #111;
+    border: 1px solid #6e6e6e;
+}
+
+body.oscuro .tarjeta {
+    background-color: #2c2c2c;
+    color: #eee;
+    border: 1px solid #6e6e6e;
+}
+
+body.oscuro .tarjeta:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 12px rgba(231, 231, 231, 0.2);
+}
+
+body.claro .tarjeta:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 12px rgba(68, 68, 68, 0.521);
+}
+
+/* CATALOGO TARJETA */
 
 .categoria {
     display: inline-block;
@@ -73,14 +158,4 @@ form {margin-bottom: 20px; text-align: center;
 }
 
 input, select {padding: 5px; margin: 0 5px;
-}
-
-/* HEADER */
-
-.footer{
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }

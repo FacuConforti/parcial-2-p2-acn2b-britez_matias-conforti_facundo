@@ -24,21 +24,21 @@ $items = [
 ],
 [   
     "id" => 4,
-    "titulo" => "Astro A30",
+    "titulo" => "Auriculares Astro A30",
     "categoria" => "Auriculares",
     "descripcion" => "A30 Wireless combina la máxima flexibilidad, movilidad, estilo y comodidad en unos auriculares para juegos.",
     "imagen" => "img/AstroA30.webp"
 ],
 [
     "id" => 5,
-    "titulo" => "VolanteG923",
+    "titulo" => "Volante G923",
     "categoria" => "Volante",
     "descripcion" => "Tecnología Force Feedback TRUEFORCE exclusiva con una conexión directa a la física de los juegos, para ofrecer realismo sin precedentes.",
     "imagen" => "img/VolanteG923.webp"
 ],
 [
     "id" => 6,
-    "titulo" => "VolanteG29",
+    "titulo" => "Volante G29",
     "categoria" => "Volante",
     "descripcion" => "Diseñado para ofrecer la experiencia de conducción perfecta, con Force Feedback con dos motores, palancas de cambio de acero inoxidable y volante de cuero cosido a mano.",
     "imagen" => "img/VolanteG29.webp"
@@ -47,7 +47,7 @@ $items = [
     "id" => 7,
     "titulo" => "Mouse PRO X SUPERLIGHT 2c",
     "categoria" => "Mouse",
-    "descripcion" => "El PRO X SUPERLIGHT 2c es un mouse compacto de 51 g que cuenta con el avanzado sensor HERO 2, robusta tecnología inalámbrica LIGHTSPEED e interruptores LIGHTFORCE.",
+    "descripcion" => "El PRO X SUPERLIGHT 2c es un mouse compacto de 51 g que cuenta con el avanzado sensor HERO 2.",
     "imagen" => "img/MouseProXSuperlight2c.webp"
 ],
 [

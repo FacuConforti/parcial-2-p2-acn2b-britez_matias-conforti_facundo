@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    
-    
+<body class="<?= $_SESSION['tema'] ?? 'claro' ?>">
 
+    <footer class="footer">
+
+        <h1>SOY UN FOOTER</h1>
+
+    </footer>
+    
 </body>
 </html>
