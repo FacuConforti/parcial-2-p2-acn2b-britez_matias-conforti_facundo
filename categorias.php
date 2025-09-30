@@ -30,19 +30,24 @@ $items_filtrados = array_filter($items, function($item) use ($filtro_categoria, 
 
     <main class="main">
 
-       <!-- FORMULARIO DE FILTRO -->
-        <form method="GET">
-            <input type="text" name="buscar" placeholder="Buscar por nombre..." value="<?= htmlspecialchars($busqueda) ?>">
-            
-            <input type="hidden" name="tema" value="<?= htmlspecialchars($tema) ?>">
+        <div class="menu-categorias">
 
-            <button type="submit" name="categoria" value="">Todos</button>
-            <button type="submit" name="categoria" value="Teclado">Teclados</button>
-            <button type="submit" name="categoria" value="Auriculares">Auriculares</button>
-            <button type="submit" name="categoria" value="Volante">Volantes</button>
-            <button type="submit" name="categoria" value="Mouse">Mouses</button>
-        </form>
+            <!-- FORMULARIO DE FILTRO -->
+            <form method="GET" class="formulario-categorias">
+                
+                <button type="submit" name="categoria" value="" class="button">Todos</button>
+                <button type="submit" name="categoria" value="Teclado" class="button">Teclados</button>
+                <button type="submit" name="categoria" value="Auriculares" class="button">Auriculares</button>
+                <button type="submit" name="categoria" value="Volante" class="button">Volantes</button>
+                <button type="submit" name="categoria" value="Mouse" class="button">Mouses</button>
 
+                <input type="text" name="buscar" placeholder="Buscar por nombre..." value="<?= htmlspecialchars($busqueda) ?>">
+                
+                <input type="hidden" name="tema" value="<?= htmlspecialchars($tema) ?>">
+
+            </form>
+
+        </div>
         
         <!-- LISTADO DE ITEMS -->
         <div class="catalogo">
