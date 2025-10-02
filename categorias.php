@@ -1,8 +1,8 @@
 <?php
 
 include "productos.php"; 
-session_start(); //Iniciamos la sesion
-$tema = $_SESSION['tema'] ?? 'claro'; //Verifica que tema se esta utilizando, si no hay tema aplica el blanco
+session_start(); // Iniciamos la sesion
+$tema = $_SESSION['tema'] ?? 'claro'; // Verifica que tema se esta utilizando, si no hay tema aplica el blanco
 
 // Traemos los parámetros GET
 $filtro_categoria = $_GET['categoria'] ?? '';
@@ -15,14 +15,45 @@ $items_filtrados = array_filter($items, function($item) use ($filtro_categoria, 
     return $cumple_categoria && $cumple_busqueda;
 });
 
+// Items sugeridos
+$sugerido = null;
+
+// Verificamos si se envio el formulario
+$errores = [];
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    if (empty($_POST['titulo'])) {
+        $errores['titulo'] = "El nombre del producto es obligatorio."; // Si nada en "titulo", guardamos el error
+    }
+
+    if (empty($_POST['descripcion'])) {
+        $errores['descripcion'] = "La descripción es obligatoria.";
+    }
+
+    if (empty($_POST['categoria'])) {
+        $errores['categoria'] = "La categoría es obligatoria.";
+    }
+
+    // Si no hay errores, guardamos la sugerencia
+    if (empty($errores)) {
+        $sugerido = [
+            "titulo" => $_POST['titulo'],
+            "descripcion" => $_POST['descripcion'],
+            "categoria" => $_POST['categoria']
+        ];
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Categorias</title>
+    <title>Catesgorias</title>
+
 </head>
 <body class="<?= $_SESSION['tema'] ?? 'claro' ?>">
     
@@ -73,6 +104,46 @@ $items_filtrados = array_filter($items, function($item) use ($filtro_categoria, 
             <?php endif; ?>
 
         </div>
+        
+        <div class="formulario-recomendar">
+
+            <h2>¿No encontraste lo que buscabas? Envianos tu recomendación.</h2>
+            <form class="formulario-sugerir" method="POST" action="">
+
+                    <label for="titulo">Nombre del producto:</label>
+                    <input type="text" id="titulo" name="titulo" required>
+                    <?php if (isset($errores['titulo'])): ?>
+                        <div class="error"><?= $errores['titulo'] ?></div>
+                    <?php endif; ?>
+
+                    <label for="descripcion">Descripción:</label>
+                    <textarea id="descripcion" name="descripcion" required></textarea>
+                    <?php if (isset($errores['descripcion'])): ?>
+                        <div class="error"><?= $errores['descripcion'] ?></div>
+                    <?php endif; ?>
+
+                    <label for="categoria">Categoría:</label>
+                    <input type="text" id="categoria" name="categoria" required>
+                    <?php if (isset($errores['categoria'])): ?>
+                        <div class="error"><?= $errores['categoria'] ?></div>
+                    <?php endif; ?>
+
+                    <button type="submit" class="button">Sugerir producto</button>
+
+                </form>
+                <?php if ($sugerido): ?>
+
+                    <div class="confirmacion">
+                        <strong>¡Gracias por tu sugerencia!</strong><br>
+                        <b>Nombre:</b> <?= $sugerido['titulo'] ?><br>
+                        <b>Descripción:</b> <?= $sugerido['descripcion'] ?><br>
+                        <b>Categoría:</b> <?= $sugerido['categoria'] ?>
+
+                    </div>
+
+                <?php endif; ?>
+
+            </div>
     </main>
     
     <?php include("footer.php"); ?>
