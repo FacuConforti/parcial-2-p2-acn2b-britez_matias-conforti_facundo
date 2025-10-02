@@ -11,7 +11,6 @@ shuffle($items);
 $items_aleatorios = array_slice($items, 0, 4);
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
