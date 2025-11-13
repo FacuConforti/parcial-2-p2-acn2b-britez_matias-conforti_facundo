@@ -4,7 +4,7 @@ $tema_actual = $_SESSION['tema'] ?? 'claro';
 $tema_opuesto = $tema_actual === 'oscuro' ? 'claro' : 'oscuro';
 
 
-
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
