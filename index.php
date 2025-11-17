@@ -1,14 +1,26 @@
 <?php
 
-include 'productos.php'; 
+include 'db.php';
 session_start(); //Iniciamos la sesion
-$tema = $_SESSION['tema'] ?? 'claro'; //Verifica que tema se esta utilizando, si no hay tema aplica el blanco
 
-// Mezclamos el array de productos
+//Conexion a la base de datos y traemos los productos
+$sql = "SELECT * FROM producto";
+$result = $conn->query($sql);
+
+$items = [];
+
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        $items[] = $row;
+    }
+}
+
+// Mezclar y elegir 4 productos
 shuffle($items);
-
-// Dejamos con los primeros 4
 $items_aleatorios = array_slice($items, 0, 4);
+
+//Modo Oscuro
+$tema = $_SESSION['tema'] ?? 'claro'; //Verifica que tema se esta utilizando, si no hay tema aplica el blanco
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +29,7 @@ $items_aleatorios = array_slice($items, 0, 4);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logitech</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/syles.css">
 </head>
 <body class="<?= $_SESSION['tema'] ?? 'claro' ?>">
 
@@ -34,9 +46,9 @@ $items_aleatorios = array_slice($items, 0, 4);
             
             <?php foreach ($items_aleatorios as $item): ?>
                 <div class="tarjeta">
-                    <img src="<?php echo $item["imagen"]; ?>" alt="<?php echo $item["titulo"]; ?>">
+                    <img src="<?= $item["imagen"] ?>" alt="<?= $item["titulo"] ?>">
+                    <p><?= $item["descripcion"] ?></p>
                     <h2><?php echo $item["titulo"]; ?></h2>
-                    <p><?php echo $item["descripcion"]; ?></p>
                     <span><?php echo $item["categoria"]; ?></span>
                 </div>
             <?php endforeach; ?>

@@ -1,7 +1,21 @@
 <?php
 
-include "productos.php"; 
+include "db.php"; 
 session_start(); // Iniciamos la sesion
+
+//Conexion a la base de datos y traemos los productos
+$sql = "SELECT * FROM producto";
+$result = $conn->query($sql);
+
+$items = [];
+
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        $items[] = $row;
+    }
+}
+
+//Modo Oscuro
 $tema = $_SESSION['tema'] ?? 'claro'; // Verifica que tema se esta utilizando, si no hay tema aplica el blanco
 
 // Traemos los parámetros GET

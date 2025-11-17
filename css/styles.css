@@ -46,6 +46,11 @@ a {
     min-height: 75vh;
 }
 
+.img-banner{
+    
+    max-width: 100%;
+}
+
 /* CATALOGO */
 .catalogo{
     margin: 0px;    
@@ -117,7 +122,7 @@ body.oscuro {
     color: #eee;
 }
 
-/* Botón Modo Oscuro */
+/* Boton Modo Oscuro */
 .boton-tema {
     padding: 5px 10px;
     border: 1px solid #ccc;

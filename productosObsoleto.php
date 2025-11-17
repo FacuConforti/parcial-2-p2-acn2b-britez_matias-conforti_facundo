@@ -58,7 +58,6 @@ $items = [
     "imagen" => "img/MouseG502XPLUS.webp"
 ]
 
-
 ];
 
 ?>
