@@ -1,12 +1,18 @@
 # parcial-1-p2-acn2b-britez_matias-conforti_facundo
 
+LINK DE LA PAGINA WEB: http://localhost/parcial-1-p2-acn2b-britez_matias-conforti_facundo/index.php
+
 Para ejecutar la aplicación web debe realizar los siguientes pasos.
 
 1- Instalar XAMPP.
+
 2- Insertar el archivo en formato de carpeta en la carpeta HTDOCS, normalmente
 ubicada en C:\xampp\htdocs.
+
 La ruta deberia quedar de la siguiente manera: C:\xampp\htdocs\parcial-1-p2-acn2b-britez_matias-conforti_facundo
-3- Ejecutar Apache y MYSQL en XAMPP
+
+3- Ejecutar Apache y MYSQL en XAMPP.
+
 4- Abrir PHPMYADMIN o MySQLWorkbench y insertar el siguiente script:
 
 -- phpMyAdmin SQL Dump
@@ -82,5 +88,6 @@ ALTER TABLE `producto`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
+5- Abrir el link: http://localhost/parcial-2-p2-acn2b-britez_matias-conforti_facundo/index.php para ver el
 
 
