@@ -15,6 +15,8 @@ if ($result->num_rows > 0) {
     }
 }
 
+
+
 //Modo Oscuro
 $tema = $_SESSION['tema'] ?? 'claro'; // Verifica que tema se esta utilizando, si no hay tema aplica el blanco
 
@@ -66,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catesgorias</title>
+    <title>Categorias</title>
 
 </head>
 <body class="<?= $_SESSION['tema'] ?? 'claro' ?>">

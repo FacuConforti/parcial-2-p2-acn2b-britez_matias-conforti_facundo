@@ -18,7 +18,8 @@ $tema_opuesto = $tema_actual === 'oscuro' ? 'claro' : 'oscuro';
         <nav>
             <a href="index.php" class="button">Inicio</a>
             <a href="categorias.php" class="button">Categorias</a>
-            <a href="productos.php" class="button">Administración</a>
+            <a href="administracion.php" class="button">administración</a>
+            <a href="api.php" class="button">API</a>
 
             <a href="tema.php?tema=<?= $tema_opuesto ?>" class="boton-tema button">
             Cambiar a <?= ucfirst($tema_opuesto) ?></a>
