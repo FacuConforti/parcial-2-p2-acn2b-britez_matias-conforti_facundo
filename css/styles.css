@@ -18,12 +18,12 @@ a {
 
 /* HEADER */
 
-.header{
+.header {
     background-color: #525252;
     color: white;
     padding: 10px 0;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);  
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -39,21 +39,21 @@ a {
 
 /* MAIN */
 
-.main{
+.main {
     display: flex;
     align-items: center;
     flex-direction: column;
     min-height: 75vh;
 }
 
-.img-banner{
-    
+.img-banner {
+
     max-width: 100%;
 }
 
 /* CATALOGO */
-.catalogo{
-    margin: 0px;    
+.catalogo {
+    margin: 0px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -61,12 +61,12 @@ a {
 
 /* FOOTER */
 
-.footer{
+.footer {
     background-color: #525252;
     color: white;
     padding: 10px 0;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);  
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -87,7 +87,7 @@ a {
     flex-direction: column;
     justify-content: center;
     vertical-align: top;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -105,7 +105,7 @@ a {
     font-size: 18px;
 }
 
-.tarjeta span{
+.tarjeta span {
     font-size: 18px;
 }
 
@@ -153,12 +153,12 @@ body.oscuro .tarjeta {
 }
 
 body.oscuro .tarjeta:hover {
-    transform: translateY(-5px); 
+    transform: translateY(-5px);
     box-shadow: 0 8px 12px rgba(231, 231, 231, 0.2);
 }
 
 body.claro .tarjeta:hover {
-    transform: translateY(-5px); 
+    transform: translateY(-5px);
     box-shadow: 0 8px 12px rgba(68, 68, 68, 0.521);
 }
 
@@ -190,16 +190,17 @@ body.oscuro .formulario-recomendar {
 /* FORMULARIO Y MENU DE CATEGORIAS */
 
 .formulario-categorias {
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
     text-align: center;
 }
 
-.formulario-categorias input, select {
-    padding: 5px; 
+.formulario-categorias input,
+select {
+    padding: 5px;
     margin: 0 5px;
 }
 
-.menu-categorias form{
+.menu-categorias form {
     width: 1200px;
     margin: 10px;
     text-align: center;
@@ -208,7 +209,7 @@ body.oscuro .formulario-recomendar {
     align-items: center;
 }
 
-.menu-categorias input{
+.menu-categorias input {
     padding: 17px 40px;
     border-radius: 50px;
     cursor: pointer;
@@ -248,7 +249,8 @@ body.oscuro .formulario-recomendar {
     margin-bottom: 3px;
 }
 
-.formulario-sugerir input, .formulario-sugerir textarea {
+.formulario-sugerir input,
+.formulario-sugerir textarea {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -264,7 +266,7 @@ body.oscuro .formulario-recomendar {
 
 /* BOTONES GENERALES DE LA PAGINA */
 
-.button{
+.button {
     padding: 17px 40px;
     border-radius: 50px;
     cursor: pointer;
@@ -287,7 +289,7 @@ body.oscuro .formulario-recomendar {
     box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
 }
 
-.button input{
+.button input {
     padding: 17px 40px;
     border-radius: 50px;
     letter-spacing: 1.5px;
@@ -296,3 +298,15 @@ body.oscuro .formulario-recomendar {
     margin: 5px;
 }
 
+/* ADMINISTRACION DE PRODUCTOS */
+
+.table-administracion {
+    margin: 20px auto;
+    width: 95%;
+    background: white;
+}
+
+.modal-administracion{
+    display: flex;
+    justify-content: space-between;
+}
