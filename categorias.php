@@ -68,6 +68,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/tarjetas.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/formulario-recomedar.css">
+
+    <link rel="stylesheet" href="css/categorias.css">
+    <link rel="stylesheet" href="css/tema.css">
+
+
     <title>Categorias</title>
 
 </head>
@@ -80,7 +90,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <div class="menu-categorias">
 
             <!-- FORMULARIO DE FILTRO -->
-            <form method="GET" class="formulario-categorias">
+            <form method="GET" class="filtro-busqueda">
                 
                 <button type="submit" name="categoria" value="" class="button">Todos</button>
                 <button type="submit" name="categoria" value="Teclado" class="button">Teclados</button>
@@ -124,6 +134,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <div class="formulario-recomendar">
 
             <h2>¿No encontraste lo que buscabas? Envianos tu recomendación.</h2>
+ 
             <form class="formulario-sugerir" method="POST" action="">
 
                     <label for="titulo">Nombre del producto:</label>

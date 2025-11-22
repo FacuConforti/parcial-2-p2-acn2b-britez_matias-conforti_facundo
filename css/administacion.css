@@ -1,0 +1,21 @@
+
+/* ADMINISTRACION DE PRODUCTOS */
+
+.table-administracion {
+    margin: 20px auto;
+    width: 95%;
+    background: white;
+}
+
+.modal-administracion{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 30px;
+    padding: 20px;
+}
+.modal-administracion td{
+    font-size: 15px;
+    margin: 0;
+}

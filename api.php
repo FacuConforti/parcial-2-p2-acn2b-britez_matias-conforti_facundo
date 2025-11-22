@@ -95,3 +95,4 @@ if ($method === "DELETE") {
 }
 
 echo json_encode(["error" => "Método no soportado"]);
+ ?>
