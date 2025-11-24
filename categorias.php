@@ -73,7 +73,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/formulario-recomedar.css">
-
     <link rel="stylesheet" href="css/categorias.css">
     <link rel="stylesheet" href="css/tema.css">
 

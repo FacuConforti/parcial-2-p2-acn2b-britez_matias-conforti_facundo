@@ -13,7 +13,8 @@ $tema = $_SESSION['tema'] ?? 'claro';
     <title>Administración</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/administracion.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/styles.css">
+     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/tarjetas.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -40,13 +41,21 @@ $tema = $_SESSION['tema'] ?? 'claro';
             <input type="text" id="titulo" required>
 
             <label>Categoría</label>
-            <input type="text" id="categoria" required>
+            <select id="categoria" required>
+
+                <option value="">Seleccionar categoría...</option>
+                <option value="Teclado">Teclado</option>
+                <option value="Auriculares">Auriculares</option>
+                <option value="Mouse">Mouse</option>
+                <option value="Volante">Volante</option>
+
+            </select>
 
             <label>Descripción</label>
             <input id="descripcion" required></input>
 
             <label>Imagen (URL o ruta)</label>
-            <input type="text" id="imagen" required>
+            <input type="text" id="imagen" value="img/" required>
 
             <button type="submit" class="button">Guardar</button>
             <button type="button" id="cerrarModal" class="button">Cancelar</button>
@@ -92,8 +101,8 @@ $tema = $_SESSION['tema'] ?? 'claro';
                 <td>${p.descripcion}</td>
                 <td><img src="${p.imagen}" width="100"></td>
                 <td>
-                    <button class="button-adm" onclick="editar(${p.id})">Editar</button>
-                    <button class="button-adm" onclick="eliminar(${p.id})" style="background:#c82828;color:white;">Eliminar</button>
+                    <button onclick="editar(${p.id})">Editar</button>
+                    <button onclick="eliminar(${p.id})" style="background:#c82828;color:white;">Eliminar</button>
                 </td>
             </tr>`;
         });
