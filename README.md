@@ -90,4 +90,5 @@ COMMIT;
 
 5- Abrir el link: http://localhost/parcial-2-p2-acn2b-britez_matias-conforti_facundo/index.php para ver el
 
-
+6- En caso de querer agregar archivos, agregar la imagen a la carpeta "IMG" en la ruta htdocs\parcial-1-p2-acn2b-britez_matias-conforti_facundo/img y luego en el campo de "imagen" en la ventana
+"administracion" escribir img/ <- NOMBRE DEL ARCHIVO.
