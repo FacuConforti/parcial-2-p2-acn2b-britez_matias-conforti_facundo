@@ -1,26 +1,7 @@
 
-/* ADMINISTRACION DE PRODUCTOS */
+/* BOTONES GENERALES DE LA PAGINA */
 
-.table-administracion {
-    margin: 20px auto;
-    width: 95%;
-    background: white;
-}
-
-.modal-administracion{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    height: 30px;
-    padding: 20px;
-}
-.modal-administracion td{
-    font-size: 15px;
-    margin: 0;
-}
-
-.button-adm {
+.button {
     padding: 17px 40px;
     border-radius: 50px;
     cursor: pointer;
@@ -36,14 +17,14 @@
     margin: 5px;
 }
 
-.button-adm:hover {
+.button:hover {
     letter-spacing: 3px;
     background-color: hsl(261deg 80% 48%);
     color: hsl(0, 0%, 100%);
     box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
 }
 
-.button-adm input {
+.button input {
     padding: 17px 40px;
     border-radius: 50px;
     letter-spacing: 1.5px;

@@ -1,16 +1,11 @@
 
 /* FORMULARIO Y MENU DE CATEGORIAS */
 
-.filtro-busquedas {
+.filtro-busqueda {
     margin-bottom: 20px;
     text-align: center;
 }
 
-.filtro-busqueda input,
-select {
-    padding: 5px;
-    margin: 0 5px;
-}
 
 .filtro-busqueda form {
     width: 1200px;
@@ -21,9 +16,10 @@ select {
     align-items: center;
 }
 
-.filtro-busquedas input {
+
+.filtro-busqueda input {
     padding: 17px 40px;
-    border-radius: 50px;
+    border-radius: 100px;
     cursor: pointer;
     border: 1;
     box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
@@ -33,4 +29,3 @@ select {
     font-weight: bold;
     margin: 5px;
 }
-

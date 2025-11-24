@@ -35,6 +35,7 @@ $tema = $_SESSION['tema'] ?? 'claro'; //Verifica que tema se esta utilizando, si
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/tema.css">
+    <link rel="stylesheet" href="css/botones.css">
 </head>
 <body class="<?= $_SESSION['tema'] ?? 'claro' ?>">
 
