@@ -11,6 +11,7 @@ $tema_opuesto = $tema_actual === 'oscuro' ? 'claro' : 'oscuro';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body class="<?= $_SESSION['tema'] ?? 'claro' ?>">
