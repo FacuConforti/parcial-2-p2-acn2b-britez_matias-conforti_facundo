@@ -13,7 +13,8 @@ $tema = $_SESSION['tema'] ?? 'claro';
     <title>Administración</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/administracion.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/styles.css">
+     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/tarjetas.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -92,8 +93,8 @@ $tema = $_SESSION['tema'] ?? 'claro';
                 <td>${p.descripcion}</td>
                 <td><img src="${p.imagen}" width="100"></td>
                 <td>
-                    <button class="button-adm" onclick="editar(${p.id})">Editar</button>
-                    <button class="button-adm" onclick="eliminar(${p.id})" style="background:#c82828;color:white;">Eliminar</button>
+                    <button onclick="editar(${p.id})">Editar</button>
+                    <button onclick="eliminar(${p.id})" style="background:#c82828;color:white;">Eliminar</button>
                 </td>
             </tr>`;
         });

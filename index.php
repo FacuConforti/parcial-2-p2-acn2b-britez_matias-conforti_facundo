@@ -30,7 +30,16 @@ $tema = $_SESSION['tema'] ?? 'claro'; //Verifica que tema se esta utilizando, si
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logitech</title>
+<<<<<<< HEAD
     <link rel="stylesheet" href="css/syles.css">
+=======
+    <link rel="stylesheet" href="css/styles.css">
+     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/tarjetas.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/tema.css">
+>>>>>>> parent of 5a096d2 (refactor: refactor de form css)
 </head>
 
 <body class="<?= $_SESSION['tema'] ?? 'claro' ?>">
