@@ -10,7 +10,7 @@ $result = $conn->query($sql);
 $items = [];
 
 if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
+    while ($row = $result->fetch_assoc()) {
         $items[] = $row;
     }
 }
@@ -25,18 +25,14 @@ $tema = $_SESSION['tema'] ?? 'claro'; //Verifica que tema se esta utilizando, si
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logitech</title>
-    <link rel="stylesheet" href="css/styles.css">
-     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/tarjetas.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/tema.css">
-    <link rel="stylesheet" href="css/botones.css">
+    <link rel="stylesheet" href="css/syles.css">
 </head>
+
 <body class="<?= $_SESSION['tema'] ?? 'claro' ?>">
 
     <?php include("header.php"); ?>
@@ -49,7 +45,7 @@ $tema = $_SESSION['tema'] ?? 'claro'; //Verifica que tema se esta utilizando, si
 
         <h1>Nuestros Productos Destacados</h1>
         <div class="catalogo">
-            
+
             <?php foreach ($items_aleatorios as $item): ?>
                 <div class="tarjeta">
                     <img src="<?= $item["imagen"] ?>" alt="<?= $item["titulo"] ?>">
@@ -58,11 +54,12 @@ $tema = $_SESSION['tema'] ?? 'claro'; //Verifica que tema se esta utilizando, si
                     <span><?php echo $item["categoria"]; ?></span>
                 </div>
             <?php endforeach; ?>
-            
+
         </div>
     </main>
-    
+
     <?php include("footer.php"); ?>
-    
+
 </body>
+
 </html>
