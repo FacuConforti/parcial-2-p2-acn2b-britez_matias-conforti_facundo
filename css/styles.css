@@ -61,6 +61,7 @@ a {
 
 /* MEDIA QUERY - DISEÑO RESPOSIVE */
 
+/* TABLETAS Y PANTALLAS MEDIANAS */
 @media (min-width: 768px) and (max-width: 1368px){
 
     /* RESPONSIVE BOTONES */
@@ -116,6 +117,7 @@ a {
 
 }
 
+/* MOVILES Y PANTALLAS PEQUEÑAS */
 @media (max-width: 768px) {
 
     /* RESPONSIVE BOTONES */
