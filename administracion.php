@@ -54,8 +54,8 @@ $tema = $_SESSION['tema'] ?? 'claro';
             <label>Descripción</label>
             <input id="descripcion" required></input>
 
-            <label>Imagen (URL o ruta)</label>
-            <input type="text" id="imagen" value="img/" required>
+            <label>Imagen (archivo)</label>
+            <input type="file" name="archivo" id="archivo" required>
 
             <button type="submit" class="button">Guardar</button>
             <button type="button" id="cerrarModal" class="button">Cancelar</button>
@@ -124,27 +124,34 @@ $tema = $_SESSION['tema'] ?? 'claro';
     };
 
     // GUARDAR (CREAR O EDITAR)
-    form.onsubmit = async e => {
+     form.onsubmit = async e => {
         e.preventDefault();
 
-        const producto = {
-            id: form.id.value,
-            titulo: form.titulo.value,
-            categoria: form.categoria.value,
-            descripcion: form.descripcion.value,
-            imagen: form.imagen.value
-        };
+        let formData = new FormData();
 
-        let method = producto.id ? "PUT" : "POST";
+        formData.append("id", form.id.value);
+        formData.append("titulo", form.titulo.value);
+        formData.append("categoria", form.categoria.value);
+        formData.append("descripcion", form.descripcion.value);
+
+        let archivo = document.querySelector("#archivo").files[0];
+        if (archivo) {
+            formData.append("archivo", archivo);
+        }
+
+        let method = form.id.value ? "POST_EDIT" : "POST_NEW";
+
+        formData.append("method", method);
 
         await fetch("api.php", {
-            method: method,
-            body: JSON.stringify(producto)
+            method: "POST",
+            body: formData
         });
 
         modal.style.display = "none";
         loadProductos();
     };
+
 
     // EDITAR PRODUCTO 
     async function editar(id) {

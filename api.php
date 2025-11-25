@@ -21,28 +21,52 @@ if ($method === "GET") {
     exit;
 }
 
-if ($method === "POST") {
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
-    if (!$input) {
-        echo json_encode(["error" => "JSON inválido"]);
-        exit;
+    if ($_POST["method"] === "POST_NEW" || $_POST["method"] === "POST_EDIT") {
+
+        $id = $_POST["id"] ?? "";
+        $titulo = $conn->real_escape_string($_POST["titulo"]);
+        $categoria = $conn->real_escape_string($_POST["categoria"]);
+        $descripcion = $conn->real_escape_string($_POST["descripcion"]);
+
+        $rutaImagen = "";
+
+        if (isset($_FILES["archivo"]) && $_FILES["archivo"]["error"] === 0) {
+
+            $nombre = uniqid() . "_" . basename($_FILES["archivo"]["name"]);
+            $destino = "img/" . $nombre;
+
+            move_uploaded_file($_FILES["archivo"]["tmp_name"], $destino);
+
+            $rutaImagen = $destino;
+        }
+
+        if ($_POST["method"] === "POST_NEW") {
+
+            $sql = "INSERT INTO producto (titulo, categoria, descripcion, imagen)
+                    VALUES ('$titulo', '$categoria', '$descripcion', '$rutaImagen')";
+
+            $conn->query($sql);
+            echo json_encode(["success" => true]);
+            exit;
+        }
+
+        if ($_POST["method"] === "POST_EDIT") {
+
+            $sql = "UPDATE producto SET 
+                titulo='$titulo',
+                categoria='$categoria',
+                descripcion='$descripcion'" .
+                ($rutaImagen ? ", imagen='$rutaImagen'" : "") .
+                " WHERE id=$id";
+
+            $conn->query($sql);
+
+            echo json_encode(["success" => true]);
+            exit;
+        }
     }
-
-    $titulo = $conn->real_escape_string($input["titulo"]);
-    $categoria = $conn->real_escape_string($input["categoria"]);
-    $descripcion = $conn->real_escape_string($input["descripcion"]);
-    $imagen = $conn->real_escape_string($input["imagen"]);
-
-    $sql = "INSERT INTO producto (titulo, categoria, descripcion, imagen)
-            VALUES ('$titulo', '$categoria', '$descripcion', '$imagen')";
-
-    if ($conn->query($sql)) {
-        echo json_encode(["success" => true, "id" => $conn->insert_id]);
-    } else {
-        echo json_encode(["error" => $conn->error]);
-    }
-
-    exit;
 }
 
 if ($method === "PUT") {
@@ -83,7 +107,20 @@ if ($method === "DELETE") {
 
     $id = intval($input["id"]);
 
-    $sql = "DELETE FROM producto WHERE id=$id";
+    $sql = "SELECT imagen FROM producto WHERE id = $id";
+    $result = $conn->query($sql);
+
+    if ($result && $result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        $rutaImagen = $row["imagen"]; 
+
+        
+        if (file_exists($rutaImagen)) {
+            unlink($rutaImagen);
+        }
+    }
+
+    $sql = "DELETE FROM producto WHERE id = $id";
 
     if ($conn->query($sql)) {
         echo json_encode(["success" => true]);
