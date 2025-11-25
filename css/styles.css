@@ -28,7 +28,7 @@ a {
 
 .button {
     padding: 17px 40px;
-    border-radius: 50px;
+    border-radius: 8px;
     cursor: pointer;
     border: 0;
     background-color: #F0F4F5;
@@ -62,13 +62,39 @@ a {
 /* MEDIA QUERY - DISEÑO RESPOSIVE */
 
 @media (max-width: 768px) {
+
+    .button {
+        font-size: 10px;
+        letter-spacing: 0px;
+        text-align: center;
+    }
+
     .header {
         flex-direction: column;
+        padding: 5px;
         height: auto;
     }
+
+    .header nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
     
+    .footer {
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    .footer nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
     .logo {
         margin: 10px 0;
     }
+
+
 }

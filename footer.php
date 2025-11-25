@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="<?= $_SESSION['tema'] ?? 'claro' ?>">
 
@@ -14,7 +15,7 @@
 
         <p>Derechos reservados</p>
 
-        <nav>
+        <nav class="nav">
 
             <a href="index.php" class="button">Inicio</a>
             <a href="categorias.php" class="button">Categorias</a>
