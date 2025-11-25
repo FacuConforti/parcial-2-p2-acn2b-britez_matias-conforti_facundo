@@ -100,10 +100,11 @@ $tema = $_SESSION['tema'] ?? 'claro';
                 <td>${p.categoria}</td>
                 <td>${p.descripcion}</td>
                 <td><img src="${p.imagen}" width="100"></td>
-                <td>
-                    <button onclick="editar(${p.id})">Editar</button>
-                    <button onclick="eliminar(${p.id})" style="background:#c82828;color:white;">Eliminar</button>
-                </td>
+                <td class="button-administracion">
+                    <button onclick="editar(${p.id})" class="button-administracion-editar">Editar</button>
+                    <button onclick="eliminar(${p.id})" class="button-administracion-eliminar">Eliminar</button>
+                </td>   
+                
             </tr>`;
         });
     }

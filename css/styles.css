@@ -4,6 +4,7 @@ body {
     margin: 0px;
     padding: 0px;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
 }
 
 h1 {
@@ -20,11 +21,8 @@ a {
     display: flex;
     align-items: center;
     flex-direction: column;
-    min-height: 75vh;
+    
 }
-
-
-
 
 /* BOTONES GENERALES DE LA PAGINA */
 
@@ -33,22 +31,22 @@ a {
     border-radius: 50px;
     cursor: pointer;
     border: 0;
-    background-color: #525252;
+    background-color: #F0F4F5;
     box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     font-size: 15px;
     font-weight: bold;
     transition: all 0.5s ease;
-    color: white;
-    margin: 5px;
+    color: black;
+    margin: 15px 10px 10px 10px; /* ARRIBA, DERECHA, ABAJO, IZQUIERDA */
 }
 
 .button:hover {
     letter-spacing: 3px;
-    background-color: hsl(261deg 80% 48%);
+    background-color: #0099CC;
     color: hsl(0, 0%, 100%);
-    box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+    box-shadow: #0099CC;
 }
 
 .button input {
@@ -58,4 +56,19 @@ a {
     text-transform: uppercase;
     font-size: 15px;
     margin: 5px;
+}
+
+
+/* MEDIA QUERY - DISEÑO RESPOSIVE */
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+    }
+    
+
+    .logo {
+        margin: 10px 0;
+    }
 }
