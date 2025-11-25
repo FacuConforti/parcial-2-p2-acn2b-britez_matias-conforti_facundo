@@ -61,6 +61,61 @@ a {
 
 /* MEDIA QUERY - DISEÑO RESPOSIVE */
 
+@media (min-width: 768px) and (max-width: 1368px){
+
+    /* RESPONSIVE BOTONES */
+    .button {
+        font-size: 12px;
+        letter-spacing: 0px;
+        text-align: center;
+        padding: 10px 20px;
+    }
+
+    /* RESPONSIVE HEADER */
+    .header {
+        flex-direction: column;
+        padding: 5px;
+        height: auto;
+    }
+
+    .header nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    /* RESPONSIVE FOOTER */
+    .footer {
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    .footer nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }       
+
+    /* RESPONSIVE TABLA ADMINISTRACION */
+    .table-administracion th, 
+    .table-administracion td {
+        padding: 6px;
+        font-size: 13px;
+    }
+
+    .table-administracion img {
+        width: 50px;
+    }
+
+    .button-administracion-editar,
+    .button-administracion-eliminar {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+
+}
+
 @media (max-width: 768px) {
 
     /* RESPONSIVE BOTONES */
@@ -131,60 +186,5 @@ a {
         padding: 5px 10px;
         font-size: 12px;
     }
-
-}
-
-@media (min-width: 768px) and (max-width: 1368px){
-
-    /* RESPONSIVE BOTONES */
-    .button {
-        font-size: 12px;
-        letter-spacing: 0px;
-        text-align: center;
-        padding: 10px 20px;
-    }
-
-    /* RESPONSIVE HEADER */
-    .header {
-        flex-direction: column;
-        padding: 5px;
-        height: auto;
-    }
-
-    .header nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    /* RESPONSIVE FOOTER */
-    .footer {
-        flex-direction: column-reverse;
-        height: auto;
-    }
-
-    .footer nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }       
-
-    /* RESPONSIVE TABLA ADMINISTRACION */
-    .table-administracion th, 
-    .table-administracion td {
-        padding: 6px;
-        font-size: 13px;
-    }
-
-    .table-administracion img {
-        width: 50px;
-    }
-
-    .button-administracion-editar,
-    .button-administracion-eliminar {
-        padding: 5px 10px;
-        font-size: 12px;
-    }
-
 
 }
