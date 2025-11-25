@@ -61,7 +61,7 @@ $tema = $_SESSION['tema'] ?? 'claro';
             <button type="button" id="cerrarModal" class="button">Cancelar</button>
         </form>
     </div>
-
+    
     <table id="tabla" border="1" cellpadding="10" class="table-administracion">
         <thead>
             <tr>

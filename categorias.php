@@ -130,6 +130,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         </div>
         
+        <!-- FORMULARIO DE RECOMENDACION DE PRODUCTO -->
         <div class="formulario-recomendar">
 
             <h2>¿No encontraste lo que buscabas? Envianos tu recomendación.</h2>
