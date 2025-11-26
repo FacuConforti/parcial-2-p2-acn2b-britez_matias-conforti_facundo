@@ -84,7 +84,7 @@ a {
         flex-wrap: wrap;
         justify-content: center;
     }
-    
+
     /* RESPONSIVE FOOTER */
     .footer {
         flex-direction: column-reverse;
@@ -114,6 +114,13 @@ a {
         font-size: 12px;
     }
 
+    /* BANNER INICIO 
+
+    .img-banner {
+
+        min-height: 300px;
+
+    }*/
 
 }
 
@@ -188,5 +195,12 @@ a {
         padding: 5px 10px;
         font-size: 12px;
     }
+
+    /* BANNER INICIO 
+    .img-banner {
+        
+        min-height: 150px;
+
+    }*/
 
 }
