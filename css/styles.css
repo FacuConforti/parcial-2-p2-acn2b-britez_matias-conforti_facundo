@@ -114,13 +114,48 @@ a {
         font-size: 12px;
     }
 
-    /* BANNER INICIO 
+    /* RESPONSIVE TARJETAS */
+    
+    .tarjeta {
+        width: 220px;
+        height: 380px;
+        margin: 10px;
+    }
 
-    .img-banner {
+    .tarjeta img {
+        max-height: 200px;
+    }
 
-        min-height: 300px;
+    .tarjeta h3 {
+        font-size: 18px;
+    }
 
-    }*/
+    .tarjeta p {
+        font-size: 16px;
+    }
+
+    .tarjeta span {
+        font-size: 16px;
+    }
+  
+    /* RESPONSIVE FORMULARIO RECOMENDAR */
+    .formulario-recomendar {
+        width: 80%  ;
+    }
+    
+    .formulario-recomendar form {
+        padding: 15px;
+        max-width: 90%;
+    }
+   
+    .formulario-recomendar h2{
+        font-size: 20px;
+
+    }
+
+    .formulario-sugerir label {
+        font-size: 14px;
+    }
 
 }
 
@@ -148,7 +183,7 @@ a {
         justify-content: center;
     }
     
-    /* RESPONSIVE FOTOER */
+    /* RESPONSIVE FOOTER */
     .footer {
         flex-direction: column-reverse;
         height: auto;
@@ -179,6 +214,10 @@ a {
 
     }
 
+     .formulario-sugerir label {
+        font-size: 12px;
+    }
+
     /* RESPONSIVE TABLA ADMINISTRACION */
     .table-administracion th, 
     .table-administracion td {
@@ -196,11 +235,41 @@ a {
         font-size: 12px;
     }
 
-    /* BANNER INICIO 
-    .img-banner {
-        
-        min-height: 150px;
 
-    }*/
+    /* RESPONSIVE TARJETAS */
+    .tarjeta {
+        width: 180px;
+        height: 320px;
+        margin: 8px;
+        padding: 10px 10px 30px 10px;
+    }
+
+    .tarjeta img {
+        max-height: 150px;
+    }
+
+    .tarjeta h3 {
+        font-size: 16px;
+    }
+
+    .tarjeta p {
+        font-size: 14px;
+    }
+
+    .tarjeta span {
+        font-size: 14px;
+    }
+   
+    /* RESPONSIVE FORMULARIO RECOMENDAR */
+     .formulario-recomendar form {
+        padding: 10px;
+       max-width: 90%;
+
+}
+
+.formulario-recomendar h2{
+    font-size: 15px;
+
+}
 
 }
