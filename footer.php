@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body class="<?= $_SESSION['tema'] ?? 'claro' ?>">
 
-    <footer class="footer">
+
+    <footer class="footer" >
 
         <a href="index.php"><img src="img/Logitech-Logo-2.png" alt="Logo" class="logo"></a>
 
@@ -24,6 +15,3 @@
         </nav>
 
     </footer>
-    
-</body>
-</html>
