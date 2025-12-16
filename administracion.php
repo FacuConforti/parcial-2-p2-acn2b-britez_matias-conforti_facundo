@@ -14,7 +14,7 @@ $items = [];
 
 
 if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
+    while ($row = $result->fetch_assoc()) {
         $items[] = $row;
     }
 }
@@ -22,12 +22,14 @@ if ($result->num_rows > 0) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css"> 
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/botones.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/tema.css">
     <link rel="stylesheet" href="css/administracion.css">
@@ -36,48 +38,56 @@ if ($result->num_rows > 0) {
 
 <body class="<?= $tema ?>">
 
-<?php include("header.php"); ?>
+    <?php include("header.php"); ?>
 
-<main class="main">
+    <main class="main">
 
-    <h1>Administración de Productos</h1>
+        <h1>Administración de Productos</h1>
 
-    <button id="btnNuevo" class="button">+ Nuevo Producto</button>
+        <button id="btnNuevo" class="button-form">+ Nuevo Producto</button>
 
-    <!-- MODAL oculto -->
-    <div id="modal" class="modal modal-administracion" style="display:none;">
-        <form id="formProducto" class="form-modal-administracion">
-            <input type="hidden" id="id">
+        <!-- MODAL oculto -->
+        <div id="modal" class="modal modal-administracion" style="display:none;">
+            <form id="formProducto" class="form-modal-administracion">
+                <div class="form-group">
+                    <label for="titulo">Título</label>
+                    <input type="text" id="titulo" required>
+                </div>
 
-            <label>Título</label>
-            <input type="text" id="titulo" required>
+                <div class="form-group">
+                    <label for="categoria">Categoría</label>
+                    <select id="categoria" required>
 
-            <label>Categoría</label>
-            <select id="categoria" required>
+                        <option value="">Seleccionar categoría</option>
+                        <option value="Teclado">Teclado</option>
+                        <option value="Auriculares">Auriculares</option>
+                        <option value="Mouse">Mouse</option>
+                        <option value="Volante">Volante</option>
 
-                <option value="">Seleccionar categoría...</option>
-                <option value="Teclado">Teclado</option>
-                <option value="Auriculares">Auriculares</option>
-                <option value="Mouse">Mouse</option>
-                <option value="Volante">Volante</option>
+                    </select>
+                </div>
 
-            </select>
+                <div class="form-group">
+                    <label for="descripcion">Descripción</label>
+                    <input type="text" id="descripcion" required>
+                </div>
 
-            <label>Descripción</label>
-            <input id="descripcion" required></input>
+                <div class="form-group">
+                    <label for="archivo">Imagen</label>
+                    <input type="file" id="archivo" required>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="button-form">Guardar</button>
+                    <button type="button" id="cerrarModal" class="button-form">Cancelar</button>
+                </div>
+            </form>
+        </div>
 
-            <label>Imagen (archivo)</label>
-            <input type="file" name="archivo" id="archivo" required>
-
-            <button type="submit" class="button">Guardar</button>
-            <button type="button" id="cerrarModal" class="button">Cancelar</button>
-        </form>
-    </div>
- 
         <!-- LISTADO DE ITEMS -->
-<div class="tarjeta-listado" >
-        <?php foreach ($items as $item): ?>
+        <div class="tarjeta-listado">
+            <?php foreach ($items as $item): ?>
                 <div class="tarjeta-administracion">
+                    <p> ID <?= $item["id"] ?></p>
                     <img src="<?= $item["imagen"] ?>" alt="<?= $item["titulo"] ?>">
                     <p><?= $item["descripcion"] ?></p>
                     <h2><?php echo $item["titulo"]; ?></h2>
@@ -86,9 +96,9 @@ if ($result->num_rows > 0) {
                     <button class="button-administracion-eliminar">Eliminar</button>
                 </div>
             <?php endforeach; ?>
-  </div>
+        </div>
 
 
-</main>
-<script src="JS/administracion/modal.js"></script>
-<?php include("footer.php"); ?>
+    </main>
+    <script src="JS/administracion/modal.js"></script>
+    <?php include("footer.php"); ?>
