@@ -8,7 +8,21 @@ $input = json_decode(file_get_contents("php://input"), true);
 
 if ($method === "GET") {
 
-    $sql = "SELECT * FROM producto";
+    $categoria = $_GET["categoria"] ?? "";
+    $buscar = $_GET["buscar"] ?? "";
+
+    $sql = "SELECT * FROM producto WHERE 1=1";
+
+    if ($categoria !== "") {
+        $categoria = $conn->real_escape_string($categoria);
+        $sql .= " AND categoria = '$categoria'";
+    }
+
+    if ($buscar !== "") {
+        $buscar = $conn->real_escape_string($buscar);
+        $sql .= " AND titulo LIKE '%$buscar%'";
+    }
+
     $result = $conn->query($sql);
 
     $productos = [];

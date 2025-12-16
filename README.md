@@ -91,3 +91,9 @@ COMMIT;
 5- Abrir el link: http://localhost/parcial-2-p2-acn2b-britez_matias-conforti_facundo/index.php para ver el
 
 6- CARGAR IMAGENES ESCRIBIR ACA
+
+
+7- ABRIR ENDPOINTS DE API
+
+http://localhost/parcial-1-p2-acn2b-britez_matias-conforti_facundo/api.php?categoria=Mouse
+http://localhost/parcial-1-p2-acn2b-britez_matias-conforti_facundo/api.php?categoria=Teclado

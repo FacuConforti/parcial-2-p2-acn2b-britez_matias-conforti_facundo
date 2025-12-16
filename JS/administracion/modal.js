@@ -39,7 +39,8 @@ const form = document.querySelector("#formProducto");
         });
 
         modal.style.display = "none";
-        loadProductos();
+        location.reload();
+
     };
 
 
@@ -67,5 +68,6 @@ const form = document.querySelector("#formProducto");
             body: JSON.stringify({ id })
         });
 
-        loadProductos();
+        location.reload();
+
     }

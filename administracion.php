@@ -11,8 +11,6 @@ $result = $conn->query($sql);
 
 $items = [];
 
-
-
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         $items[] = $row;
@@ -32,6 +30,7 @@ if ($result->num_rows > 0) {
     <link rel="stylesheet" href="css/botones.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/tema.css">
+    <link rel="stylesheet" href="css/tarjetas.css">
     <link rel="stylesheet" href="css/administracion.css">
     <title>Administración</title>
 </head>
@@ -49,6 +48,7 @@ if ($result->num_rows > 0) {
         <!-- MODAL oculto -->
         <div id="modal" class="modal modal-administracion" style="display:none;">
             <form id="formProducto" class="form-modal-administracion">
+                <input type="hidden" id="id">
                 <div class="form-group">
                     <label for="titulo">Título</label>
                     <input type="text" id="titulo" required>
@@ -86,14 +86,23 @@ if ($result->num_rows > 0) {
         <!-- LISTADO DE ITEMS -->
         <div class="tarjeta-listado">
             <?php foreach ($items as $item): ?>
-                <div class="tarjeta-administracion">
+                <div class="tarjeta">
                     <p> ID <?= $item["id"] ?></p>
                     <img src="<?= $item["imagen"] ?>" alt="<?= $item["titulo"] ?>">
                     <p><?= $item["descripcion"] ?></p>
-                    <h2><?php echo $item["titulo"]; ?></h2>
+                    <h3><?php echo $item["titulo"]; ?></h3>
                     <span><?php echo $item["categoria"]; ?></span>
-                    <button class="button-administracion-editar">Editar</button>
-                    <button class="button-administracion-eliminar">Eliminar</button>
+                    <button 
+                        class="button-administracion-editar"
+                        onclick="editar(<?= $item['id'] ?>)">
+                        Editar
+                    </button>
+
+                    <button 
+                        class="button-administracion-eliminar"
+                        onclick="eliminar(<?= $item['id'] ?>)">
+                        Eliminar
+                    </button>
                 </div>
             <?php endforeach; ?>
         </div>
