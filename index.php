@@ -31,8 +31,9 @@ $tema = $_SESSION['tema'] ?? 'claro'; //Verifica que tema se esta utilizando, si
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logitech</title>
     <link rel="stylesheet" href="css/styles.css">
-     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/tarjetas.css">
+    <link rel="stylesheet" href="css/botones.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/tema.css">

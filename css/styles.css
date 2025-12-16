@@ -21,48 +21,14 @@ a {
     display: flex;
     align-items: center;
     flex-direction: column;
-    
-}
 
-/* BOTONES GENERALES DE LA PAGINA */
-
-.button {
-    padding: 17px 40px;
-    border-radius: 8px;
-    cursor: pointer;
-    border: 0;
-    background-color: #F0F4F5;
-    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    font-size: 15px;
-    font-weight: bold;
-    transition: all 0.5s ease;
-    color: black;
-    margin: 15px 10px 10px 10px; /* ARRIBA, DERECHA, ABAJO, IZQUIERDA */
-}
-
-.button:hover {
-    letter-spacing: 3px;
-    background-color: #0099CC;
-    color: hsl(0, 0%, 100%);
-    box-shadow: #0099CC;
-}
-
-.button input {
-    padding: 17px 40px;
-    border-radius: 50px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    font-size: 15px;
-    margin: 5px;
 }
 
 
 /* MEDIA QUERY - DISEÑO RESPOSIVE */
 
 /* TABLETAS Y PANTALLAS MEDIANAS */
-@media (min-width: 768px) and (max-width: 1368px){
+@media (min-width: 768px) and (max-width: 1368px) {
 
     /* RESPONSIVE BOTONES */
     .button {
@@ -95,18 +61,9 @@ a {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-    }       
+    }
 
     /* RESPONSIVE TABLA ADMINISTRACION */
-    .table-administracion th, 
-    .table-administracion td {
-        padding: 6px;
-        font-size: 13px;
-    }
-
-    .table-administracion img {
-        width: 50px;
-    }
 
     .button-administracion-editar,
     .button-administracion-eliminar {
@@ -115,7 +72,7 @@ a {
     }
 
     /* RESPONSIVE TARJETAS */
-    
+
     .tarjeta {
         width: 220px;
         height: 380px;
@@ -137,18 +94,14 @@ a {
     .tarjeta span {
         font-size: 16px;
     }
-  
+
     /* RESPONSIVE FORMULARIO RECOMENDAR */
-    .formulario-recomendar {
-        width: 80%  ;
-    }
-    
     .formulario-recomendar form {
         padding: 15px;
         max-width: 90%;
     }
-   
-    .formulario-recomendar h2{
+
+    .formulario-recomendar h2 {
         font-size: 20px;
 
     }
@@ -182,7 +135,7 @@ a {
         flex-wrap: wrap;
         justify-content: center;
     }
-    
+
     /* RESPONSIVE FOOTER */
     .footer {
         flex-direction: column-reverse;
@@ -201,34 +154,25 @@ a {
     }
 
     /* RESPONSIVE FORMULARIO ADMINISTRACION */
-    .form-modal-administracion{
+    .form-modal-administracion {
         display: flex;
         flex-direction: column;
         margin: 5px;
 
     }
 
-    .form-modal-administracion label{
+    .form-modal-administracion label {
 
         margin: 5px;
 
     }
 
-     .formulario-sugerir label {
+    .formulario-sugerir label {
         font-size: 12px;
     }
 
     /* RESPONSIVE TABLA ADMINISTRACION */
-    .table-administracion th, 
-    .table-administracion td {
-        padding: 3px;
-        font-size: 10px;
-    }
-
-    .table-administracion img {
-        width: 50px;
-    }
-
+    
     .button-administracion-editar,
     .button-administracion-eliminar {
         padding: 5px 10px;
@@ -259,17 +203,17 @@ a {
     .tarjeta span {
         font-size: 14px;
     }
-   
+
     /* RESPONSIVE FORMULARIO RECOMENDAR */
-     .formulario-recomendar form {
+    .formulario-recomendar form {
         padding: 10px;
-       max-width: 90%;
+        max-width: 90%;
 
-}
+    }
 
-.formulario-recomendar h2{
-    font-size: 15px;
+    .formulario-recomendar h2 {
+        font-size: 15px;
 
-}
+    }
 
 }
