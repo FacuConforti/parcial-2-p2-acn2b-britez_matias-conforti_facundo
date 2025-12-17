@@ -6,7 +6,7 @@
 
         <p>Derechos reservados</p>
 
-        <nav class="nav">
+        <nav>
 
             <a href="index.php" class="button">Inicio</a>
             <a href="categorias.php" class="button">Categorias</a>

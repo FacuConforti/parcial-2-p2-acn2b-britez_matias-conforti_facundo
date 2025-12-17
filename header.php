@@ -9,7 +9,7 @@ $tema_opuesto = $tema_actual === 'oscuro' ? 'claro' : 'oscuro';
         <a href="index.php">
             <img src="img/Logitech-Logo-2.png" alt="Logo" class="logo">
         </a>
-        <nav>
+        <nav class="nav">
             <a href="index.php" class="button">Inicio</a>
             <a href="categorias.php" class="button">Categorias</a>
             <a href="administracion.php" class="button">Administración</a>

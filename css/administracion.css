@@ -68,3 +68,10 @@
     color: hsl(0, 0%, 100%);
     box-shadow: #0099CC;
 }
+
+/* RESPONSIVE MODAL */
+@media (max-width: 600px) {
+    .form-modal-administracion {
+        grid-template-columns: 1fr;
+    }
+}
