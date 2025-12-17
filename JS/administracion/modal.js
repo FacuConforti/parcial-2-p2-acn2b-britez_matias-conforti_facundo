@@ -54,9 +54,11 @@ const form = document.querySelector("#formProducto");
         form.titulo.value = p.titulo;
         form.categoria.value = p.categoria;
         form.descripcion.value = p.descripcion;
-        form.imagen.value = p.imagen;
+       // form.imagen.value = p.imagen;
 
         modal.style.display = "flex";
+
+        form.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
     // ELIMINAR 
