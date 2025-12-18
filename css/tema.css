@@ -65,3 +65,30 @@ body.oscuro .formulario-recomendar {
     border: 1px solid #6e6e6e;
 }
 
+/* Form Categorias */
+
+body.claro .form-categorias {
+    background: #f9f9f9;
+    color: #111;
+    border: 1px solid #ddd;
+}
+
+body.oscuro .form-categorias {
+    background: #2c2c2c;
+    color: #eee;
+    border: 1px solid #6e6e6e;
+}
+
+/* Modal Administracion */
+
+body.claro .formulario-sugerir {
+    background-color: hsl(0, 0%, 100%);
+    color: #111;
+    border: 1px solid #ddd;
+}
+
+body.oscuro .formulario-sugerir {
+    background-color: #2c2c2c;
+    color: #eee;
+    border: 1px solid #6e6e6e;
+}
