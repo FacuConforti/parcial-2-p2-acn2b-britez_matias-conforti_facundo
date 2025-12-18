@@ -1,4 +1,4 @@
-# parcial-1-p2-acn2b-britez_matias-conforti_facundo
+# final-p2-acn2b-britez_matias-conforti_facundo
 
 LINK DE LA PAGINA WEB: http://localhost/parcial-1-p2-acn2b-britez_matias-conforti_facundo/index.php
 
